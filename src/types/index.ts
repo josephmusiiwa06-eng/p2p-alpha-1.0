@@ -84,6 +84,7 @@ export type TestScore = ScoredTest
 
 export interface ScoringResult {
   tests: ScoredTest[]
+  total_points: number
   motor_score: number
   overall_rating: OverallRating
 }
