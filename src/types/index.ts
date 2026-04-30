@@ -70,13 +70,15 @@ export interface TestInput {
 }
 
 export interface ScoredTest {
-  test_name: TestName
+  test: TestName
   raw_value: number
   unit: string
   rating: Rating
   score_points: number
-  target_label: string
+  target: string
 }
+
+export type TestScore = ScoredTest
 
 export interface ScoringResult {
   tests: ScoredTest[]
