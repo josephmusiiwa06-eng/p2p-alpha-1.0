@@ -165,14 +165,14 @@ export default function DashboardPage() {
       {/* TODAY'S ASSESSMENTS */}
       <div className="section">
         <div className="section-hdr">
-          <span className="section-title">Today's assessments</span>
+          <span className="section-title">Today&apos;s assessments</span>
           <Link href="/children" style={{ fontSize: 12, color: 'var(--good)', fontWeight: 500, textDecoration: 'none' }}>View all →</Link>
         </div>
 
         {todayList.length === 0 ? (
           <div className="card" style={{ textAlign: 'center', padding: '2rem' }}>
             <p style={{ color: 'var(--muted)', fontSize: 14 }}>No assessments yet today</p>
-            <p style={{ color: 'var(--muted)', fontSize: 12, marginTop: 4 }}>Tap "Start assessment" to begin</p>
+            <p style={{ color: 'var(--muted)', fontSize: 12, marginTop: 4 }}>Tap &quot;Start assessment&quot; to begin</p>
           </div>
         ) : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
