@@ -1,6 +1,8 @@
 export type Gender = 'male' | 'female' | 'other'
 export type Rating = 'Good' | 'Average' | 'Needs work'
 export type OverallRating = 'Excellent' | 'On track' | 'Developing'
+export type AgeBand = 3 | 4 | 5 | 6
+
 export type TestName = 'balance' | 'shuttle' | 'throw_catch' | 'jump'
 
 export interface School {
