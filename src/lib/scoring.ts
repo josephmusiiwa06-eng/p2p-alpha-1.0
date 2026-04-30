@@ -124,12 +124,14 @@ export function scoreAssessment(
   inputs: TestInput,
   ageBand: AgeBand
 ): ScoringResult {
-  const tests: TestScore[] = [
+  const baseTests: Array<{ test: TestName; raw_value: number; unit: string }> = [
     { test: 'balance',     raw_value: inputs.balance,     unit: UNITS.balance },
     { test: 'shuttle_run', raw_value: inputs.shuttle_run, unit: UNITS.shuttle_run },
     { test: 'throw_catch', raw_value: inputs.throw_catch, unit: UNITS.throw_catch },
     { test: 'jump',        raw_value: inputs.jump,        unit: UNITS.jump },
-  ].map(t => {
+  ]
+
+  const tests: TestScore[] = baseTests.map(t => {
     const { rating, score_points } = rateTest(t.test, t.raw_value, ageBand)
     return {
       ...t,
